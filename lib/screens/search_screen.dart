@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_github_search/providers/search_provider.dart';
 import 'package:flutter_github_search/widgets/list_search.dart';
 import 'package:flutter_github_search/widgets/text_search.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,6 +18,10 @@ class _HomeScreenState extends State<HomeScreen> {
     final provider = Provider.of<SearchProvider>(context, listen: true);
     return Scaffold(
       appBar: AppBar(
+        leading: Icon(
+          MdiIcons.github,
+          color: Colors.black,
+        ),
         title: Text(
           'Github User Finder',
           style: TextStyle(
